@@ -1,5 +1,5 @@
-node {
-  try {
+pipeline {
+
     stage('Checkout') {
       checkout scm
     }
@@ -18,8 +18,5 @@ node {
   
    
   }
-  }
-  catch (err) {
-    throw err
-  }
+ 
 }
