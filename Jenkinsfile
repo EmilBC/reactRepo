@@ -16,7 +16,7 @@ dockerImageTag = "devopsexamplenew${env.BUILD_NUMBER}"
         stage("Build Prod") {
 		 steps {
 		  script{      
-		bat "npm install"
+		bat "npm start"
 		  }
 			 }
 	}
