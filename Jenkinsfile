@@ -9,7 +9,7 @@ node {
 		
 		
          script{      
- bat "npm build"   
+ bat "npm run build "   
 		
 	 }
             }
