@@ -1,3 +1,4 @@
+
 pipeline {
 	
     agent any
@@ -14,11 +15,7 @@ dockerImageTag = "devopsexamplenew${env.BUILD_NUMBER}"
 	  checkout scm
 	      }    }
         stage("Build Prod") {
-		 steps {
-		  script{      
-		bat "npm start"
-		  }
-			 }
+		bat "npm install"
 	}
 	
 
@@ -42,3 +39,4 @@ dockerImageTag = "devopsexamplenew${env.BUILD_NUMBER}"
     }
     
 }
+
