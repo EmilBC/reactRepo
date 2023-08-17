@@ -3,7 +3,17 @@ node {
     stage('Checkout') {
       checkout scm
     }
-	    
+   stage("Build Prod Dev") {
+	
+		 steps {
+		
+		
+         script{      
+ bat "npm build"   
+		
+	 }
+            }
+        	    
     
   
    
