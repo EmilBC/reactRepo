@@ -18,6 +18,7 @@ node {
   
    
   }
+  }
   catch (err) {
     throw err
   }
