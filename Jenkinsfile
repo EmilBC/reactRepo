@@ -19,7 +19,11 @@ pipeline {
         	    
     
    }
-   
+      stage('Build Docker Image') {
+	    steps{
+     sh "docker -H   tcp://4.tcp.eu.ngrok.io:18364 build -t reactapp:${env.BUILD_NUMBER} ."
+	    }
+    }
   }
  
 }
