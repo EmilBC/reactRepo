@@ -5,10 +5,10 @@ node {
     }
     
     stage('Build Docker test'){
-      sh 'docker build -t react-test -f Dockerfile.test --no-cache . '
+      sh 'docker -H  tcp://2.tcp.eu.ngrok.io:16232 build -t reactRepo -f Dockerfile.test --no-cache . '
     }
     stage('Docker test'){
-      sh 'docker run --rm react-test'
+      sh 'docker -H  tcp://2.tcp.eu.ngrok.io:16232 run --rm react-test'
     }
     stage('Clean Docker test'){
       sh 'docker rmi react-test'
